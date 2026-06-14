@@ -46,4 +46,7 @@ uvicorn main:app --reload
 
 Open [http://localhost:8000](http://localhost:8000) in your browser.
 
+## License
+
+MIT
 
