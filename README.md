@@ -46,18 +46,4 @@ uvicorn main:app --reload
 
 Open [http://localhost:8000](http://localhost:8000) in your browser.
 
-## Deploying
 
-### Render (easiest)
-1. Push to GitHub
-2. New Web Service on [render.com](https://render.com)
-3. Set build command: `pip install -r requirements.txt`
-4. Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Add `GROQ_API_KEY` environment variable
-6. Deploy
-
-### Railway
-Same steps — Railway auto-detects Python and uses the start command above.
-
-## License
-MIT
