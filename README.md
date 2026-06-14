@@ -1,0 +1,63 @@
+# Study Planner AI (Python)
+
+AI-powered study schedule chatbot built with FastAPI + Groq (Llama 3.3).
+
+## Project Structure
+
+```
+study-planner-python/
+├── static/
+│   └── index.html       ← Frontend chatbot UI
+├── main.py              ← FastAPI backend
+├── requirements.txt     ← Python dependencies
+├── .env.example         ← Environment variable template
+├── .gitignore
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+- Python 3.10 or higher
+- A Groq API key → [console.groq.com](https://console.groq.com)
+
+### Installation
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/YOUR_USERNAME/study-planner-ai.git
+cd study-planner-ai
+
+# 2. Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate        # Mac/Linux
+venv\Scripts\activate           # Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Set up environment variables
+cp .env.example .env
+# Edit .env and add your GROQ_API_KEY
+
+# 5. Run the server
+uvicorn main:app --reload
+```
+
+Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Deploying
+
+### Render (easiest)
+1. Push to GitHub
+2. New Web Service on [render.com](https://render.com)
+3. Set build command: `pip install -r requirements.txt`
+4. Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+5. Add `GROQ_API_KEY` environment variable
+6. Deploy
+
+### Railway
+Same steps — Railway auto-detects Python and uses the start command above.
+
+## License
+MIT
