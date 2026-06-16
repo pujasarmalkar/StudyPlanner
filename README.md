@@ -19,7 +19,7 @@ study-planner-python/
 
 ### Prerequisites
 - Python 3.10 or higher
-- A Groq API key → [console.groq.com](https://console.groq.com)
+
 
 ### Installation
 
@@ -35,10 +35,6 @@ venv\Scripts\activate           # Windows
 
 # 3. Install dependencies
 pip install -r requirements.txt
-
-# 4. Set up environment variables
-cp .env.example .env
-# Edit .env and add your GROQ_API_KEY
 
 # 5. Run the server
 uvicorn main:app --reload
